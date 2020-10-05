@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/formulario.css">
+  <link type="text/css" rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/expresiones.css" />
+  <link rel="stylesheet" href="css/sweetalert2.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6//scale.css" />
+  <title>Formulario</title>
+</head>
+
+<body>
+  <div class="cuerpo">
+    <p id="textoAyuda"></p>
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="img/regex.png" alt="" width="300" height="300">
+        <h2>Expresiones regulares</h2>
+        <p class="lead">Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de
+          caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se
+          utilizan con los métodos exec() y test() de RegExp, y con match(), matchAll(), replace(), replaceAll(),
+          search() y split() métodos de String. Este capítulo describe las expresiones regulares de JavaScript..</p>
+      </div>
+      <br>
+      <h3>Sitio para registrarse</h3>
+      <form name="vform">
+        <div class="form-row">
+          <div class="form-group col">
+            <div id="nombre_div">
+              <input type="text" class="form-control" id="fname" onblur="funcNombre()" name="firstname"
+                placeholder="Nombres">
+              <div id="nombre_error"></div>
+            </div>
+          </div>
+          <div class="form-group col">
+            <div id="apellido_div">
+              <input type="text" class="form-control" id="lname" onblur="funcApellido()" name="lastname"
+                placeholder="Apellidos">
+              <div id="apellido_error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <div id="correo_id">
+              <input type="text" class="form-control" id="correo" onblur="funcCorreo()" name="Correo"
+                placeholder="Correo">
+              <div id="correo_error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <div id="edad_div">
+              <input type="text" class="form-control" id="edad" onblur="funcEdad()" name="Edad" placeholder="Edad">
+              <div id="edad_error"></div>
+            </div>
+          </div>
+          <div class="form-group col">
+            <div id="dui_div">
+              <input type="text" class="form-control" id="dui" onblur="funcDui()" name="dui" placeholder="DUI">
+              <div id="dui_error"></div>
+            </div>
+          </div>
+          <div class="form-group col">
+            <div id="nit_div">
+              <input type="text" class="form-control" id="nit" onblur="funcNit()" name="nit" placeholder="NIT">
+              <div id="nit_error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="from-group col">
+            <div id="numero_div">
+              <input type="text" class="form-control" id="numero" onblur="funcTelefono()" name="numero"
+                placeholder="Numero de teléfono">
+              <div id="numero_error"></div>
+            </div>
+          </div>
+          <div class="from-group col">
+            <div id="fecha_div">
+              <input type="text" class="form-control" id="fecha" onblur="funcFecha()" name="fecha" placeholder="Fecha">
+              <div id="fecha_error"></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <button id="btnEnviar" type="button" class="btn btn-success btn-lg">Enviar</button>
+        <button id="btnLimpiar" type="submit" onclick="limpiar()" class="btn btn-warning btn-lg">Limpiar</button>
+      </form>
+    </div>
+  </div>
+  <br><br>
+
+  <!-- Inicio Footer -->
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Acerca del sitio</h6>
+          <p class="text-justify">Sitio web creado por los estudiantes de ingenieria en computación para demostrar el
+            uso de el framework de diseño de
+            Bootstrap en su version 4.5 y las expresiones regulares como metodo de validación para campos.
+          </p>
+        </div>
+
+        <div class="col-xs-6 col-md-2">
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+          <h6>Desarrolladores</h6>
+          <ul class="footer-links">
+            <li>Luis Eduardo Cañas Santos - CS171609</li>
+            <li>Luis Angel Monterroza - AM191922</li>
+            <li>Luis Eduardo Vásquez Villalta - VV121782</li>
+            <li>Bryan Alexander Araujo Aquino - AA131885</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 Todos los derechos reservados por
+            <a href="#">UDB developer's</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="logo"><img src="img/logodark.png" alt="" width="225" height="75"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Fin Footer -->
+  <script src="js/Bootstrap/jquery-3.5.1.min.js"></script>
+  <script src="js/Bootstrap/popper.min.js"></script>
+  <script src="js/Bootstrap/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="js/ExpresionesRegulares.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="js/sweetalert2.min.js"></script>
+  <script src="js/sweetAlert.js"></script>
+</body>
+
+</html>
